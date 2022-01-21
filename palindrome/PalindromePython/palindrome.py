@@ -21,7 +21,7 @@ def main():
         exit(-1)
 
     # Next, we validate the string and return the results.
-    print("Validating string '%s'...", strInput)
+    print("Validating string '%s'..." % strInput)
     considerWs = True if considerWsInput == "y" else False
     isPalindrome = ValidateIsPalindromeString(strInput, considerWs)
     isPalindromeString = "is" if isPalindrome else "is not"
