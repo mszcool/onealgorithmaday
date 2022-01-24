@@ -24,24 +24,6 @@ var isPalindromeText = isPalindrome ? "is" : "is not";
 LogMessageToConsole($"String '{stringToValidateInput}' {isPalindromeText} palindrom!");
 
 //
-// Helper function for simple, console-based logging.
-//
-static void LogMessageToConsole(string message, MessageType messageType = MessageType.Info)
-{
-    var currentColor = System.Console.ForegroundColor;
-    try
-    {
-        if (messageType == MessageType.Error)
-            System.Console.ForegroundColor = System.ConsoleColor.Red;
-        System.Console.WriteLine(message);
-    }
-    finally
-    {
-        System.Console.ForegroundColor = currentColor;
-    }
-}
-
-//
 // Implementation of the algorithm
 //
 static bool ValidateStringForPalindrome(string str, bool considerWhitespaces)
@@ -63,6 +45,24 @@ static bool ValidateStringForPalindrome(string str, bool considerWhitespaces)
     // Then check if the reverse is exactly the same as the regular length.
     var reverseStr = new String(strToEval.Reverse().ToArray());
     return string.Equals(strToEval, reverseStr, StringComparison.InvariantCultureIgnoreCase);
+}
+
+//
+// Helper function for simple, console-based logging.
+//
+static void LogMessageToConsole(string message, MessageType messageType = MessageType.Info)
+{
+    var currentColor = System.Console.ForegroundColor;
+    try
+    {
+        if (messageType == MessageType.Error)
+            System.Console.ForegroundColor = System.ConsoleColor.Red;
+        System.Console.WriteLine(message);
+    }
+    finally
+    {
+        System.Console.ForegroundColor = currentColor;
+    }
 }
 
 public enum MessageType
