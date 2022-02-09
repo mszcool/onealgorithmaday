@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/shuffle/ShuffleCSharp/bin/Debug/net6.0/ShuffleCSharp.dll",
+            "program": "${workspaceFolder}/simplepatternmatch/SimplePatternMatchCSharp/bin/Debug/net6.0/SimplePatternMatchCSharp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/shuffle/ShuffleCSharp",
+            "cwd": "${workspaceFolder}/simplepatternmatch/SimplePatternMatchCSharp",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "integratedTerminal",
             "stopAtEntry": false
